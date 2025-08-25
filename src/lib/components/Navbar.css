@@ -1,0 +1,129 @@
+:where(.Navbar) {
+	--height: 4rem;
+
+	position: sticky;
+	z-index: var(--z-navbar);
+	inset-block-start: 0;
+
+	container-name: navbar;
+	container-type: inline-size;
+	overflow-x: clip;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-between;
+
+	max-height: var(--height);
+	margin-block-end: 1rem;
+
+	background-color: var(--cl-nav-background);
+}
+
+.Navbar-logo {
+	justify-self: start;
+	max-width: var(--height);
+}
+
+.Navbar-logoImage {
+	aspect-ratio: 1;
+	max-height: 100%;
+	object-fit: cover;
+}
+
+.Navbar-menuButton {
+	flex: 1;
+
+	max-width: 4rem;
+	border: none;
+
+	color: var(--cl-accent);
+	text-align: center;
+
+	background-color: unset;
+
+	transition: all 200ms ease-in;
+
+	@container navbar (width > 500px) {
+		display: none;
+	}
+}
+
+.Navbar-menuButton.is-enabled {
+	color: var(--cl-background);
+	background-color: var(--cl-accent);
+}
+
+.Navbar-menuIcon {
+	font-size: var(--fs-icon);
+}
+
+.Navbar-links {
+	position: absolute;
+	inset-block-start: var(--height);
+	translate: 100% 0;
+
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-items: stretch;
+
+	width: 100%;
+	height: calc(100svh - var(--height));
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+
+	background-color: var(--cl-raise);
+
+	transition: translate 200ms ease-in;
+
+	@container navbar (width > 500px) {
+		position: static;
+		translate: 0;
+
+		flex-direction: row;
+		gap: 0.5rem;
+		align-items: stretch;
+		justify-content: end;
+
+		height: unset;
+
+		background-color: unset;
+	}
+}
+
+.Navbar-links.is-expanded {
+	translate: 0;
+}
+
+.Navbar-item {
+	display: contents;
+}
+
+.Navbar-link {
+	align-content: center;
+
+	padding: 0.5rem 0;
+
+	font-family: var(--ff-accent);
+	color: var(--cl-accent);
+	text-align: center;
+	text-decoration: none;
+
+	transition: all 75ms ease;
+
+	@container navbar (width > 500px) {
+		padding: 0 0.5rem;
+	}
+}
+
+.Navbar-link.active,
+.Navbar-link:hover {
+	color: var(--cl-background);
+	background-color: var(--cl-accent);
+}
+
+.Navbar-link:hover {
+	filter: var(--fx-link-hover);
+}

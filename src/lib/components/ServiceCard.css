@@ -1,0 +1,31 @@
+.ServiceCard {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+
+	padding: 1.5rem 1rem;
+
+	background-color: var(--cl-drop);
+	box-shadow: var(--bs-full-inner);
+}
+
+.ServiceCard-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ServiceCard-title {
+	margin: 0;
+}
+
+.ServiceCard-icon {
+	font-size: var(--fs-icon);
+	color: var(--cl-accent);
+}
+
+.ServiceCard-body {
+	margin: 0;
+	line-height: 1.4;
+}

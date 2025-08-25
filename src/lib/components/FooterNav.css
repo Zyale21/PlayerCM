@@ -1,0 +1,49 @@
+.FooterNav {
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-template-columns: 1fr 1fr;
+	place-self: center;
+
+	max-width: 30rem;
+
+	@container footer (width > 1000px) {
+		grid-area: nav;
+	}
+}
+
+.FooterNav-header {
+	grid-column: 1 / 3;
+	text-align: center;
+}
+
+.FooterNav-site,
+.FooterNav-legal {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+.FooterNav-item {
+	display: contents;
+}
+
+.FooterNav-icon {
+	font-size: var(--fs-icon-inline);
+	color: var(--cl-accent);
+}
+
+.FooterNav-link {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	align-items: center;
+
+	font-family: var(--ff-accent);
+	color: inherit;
+	text-decoration: none;
+}

@@ -1,0 +1,32 @@
+.CallToAction {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+
+	max-width: 12rem;
+	padding: 0.25rem 0.75rem;
+	border: none;
+	border-radius: 2rem;
+
+	font-family: var(--ff-cta);
+	font-size: var(--fs-cta);
+	font-variant: small-caps;
+	color: var(--cl-background);
+	text-align: center;
+	text-decoration: none;
+
+	background-color: var(--cl-accent);
+	box-shadow: var(--bs-full-drop);
+
+	transition: all 200ms ease;
+}
+
+.CallToAction-icon {
+	font-size: var(--fs-icon);
+}
+
+.CallToAction:hover {
+	color: var(--cl-accent);
+	background-color: var(--cl-background);
+}

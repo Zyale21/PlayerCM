@@ -1,0 +1,34 @@
+.Contact-body {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 4rem;
+	align-items: center;
+	justify-content: space-around;
+
+	padding: 2rem;
+}
+
+.Contact-info {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	text-align: center;
+}
+
+.Contact-infoBody,
+.Contact-links {
+	font-size: var(--fs-accent-secondary);
+}
+
+.Contact-infoBody {
+	line-height: 2;
+}
+
+.Contact-links {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	place-self: center;
+
+	max-width: 30rem;
+}

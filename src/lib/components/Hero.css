@@ -1,0 +1,146 @@
+.Hero {
+	position: relative;
+
+	container-name: hero;
+	container-type: inline-size;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	min-height: 100dvh;
+}
+
+.Hero::before {
+	content: "";
+
+	position: absolute;
+	z-index: var(--z-background);
+	inset: 0;
+
+	background-image: url("$lib/assets/hero_background.jpg");
+	background-repeat: no-repeat;
+	background-position: 49% 80%;
+	background-size: 250dvh;
+	filter: sepia(100%) hue-rotate(10deg) saturate(25%);
+}
+
+.Hero-nav {
+	display: flex;
+	flex-direction: row;
+	gap: 1.5rem;
+	align-items: stretch;
+	justify-content: end;
+
+	padding: clamp(1.125rem, 5vmin + 0.5rem, 3.25rem) 2rem;
+
+	background: linear-gradient(
+		180deg,
+		rgb(0 0 0 / 90%) 0%,
+		rgb(0 0 0 / 50%) 75%,
+		rgb(0 0 0 / 0%) 100%
+	);
+}
+
+.Hero-link {
+	font-family: var(--ff-accent);
+	font-size: var(--fs-hero-nav-link);
+	text-decoration: none;
+}
+
+.Hero-logo {
+	place-self: center;
+
+	aspect-ratio: 1;
+	max-width: 100%;
+	max-width: clamp(10rem, 15vmin + 6rem, 22rem);
+	max-height: 100%;
+	margin-inline: 2rem;
+
+	object-fit: cover;
+	background: radial-gradient(
+		circle,
+		rgb(0 0 0 / 75%) 0%,
+		rgb(0 0 0 / 50%) 15%,
+		rgb(0 0 0 / 0%) 65%
+	);
+}
+
+.Hero-textContainer {
+	--padding: clamp(0rem, 20vh - 10rem, 8rem);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	padding-block: calc(var(--padding) * 0.5) var(--padding);
+
+	background: linear-gradient(
+		0deg,
+		#000 0%,
+		rgb(0 0 0 / 70%) 65%,
+		rgb(0 0 0 / 40%) 90.5%,
+		rgb(0 0 0 / 0%) 100%
+	);
+}
+
+.Hero-text {
+	display: grid;
+	grid-template:
+		"tagline tagline" min-content
+		"divider divider" min-content
+		"blurb cta" min-content / 1fr max-content;
+	gap: 1rem 0.8rem;
+
+	max-width: 40rem;
+	padding: 2.25rem 2rem;
+
+	@container hero (width < 500px) {
+		grid-template:
+			"tagline" min-content
+			"divider" min-content
+			"blurb" min-content
+			"cta" min-content / 1fr;
+	}
+}
+
+.Hero-tagline {
+	grid-area: tagline;
+	place-self: center;
+
+	max-width: min(80%, 30rem);
+	margin: 0;
+
+	font-size: clamp(1.4rem, 0.8rem + 2vmax, 2.4rem);
+	color: inherit;
+	text-align: center;
+}
+
+.Hero-divider {
+	grid-area: divider;
+	margin-inline: 3rem;
+	border-color: var(--cl-accent);
+}
+
+.Hero-blurb {
+	grid-area: blurb;
+
+	margin: 0;
+	padding-inline: 1rem;
+
+	font-family: var(--ff-hero);
+	font-size: clamp(0.9rem, 1.5vmax + 0.3rem, 1.2rem);
+	line-height: 1.35;
+
+	@container hero (width < 500px) {
+		text-align: center;
+	}
+}
+
+.Hero-cta {
+	grid-area: cta;
+	place-self: center;
+
+	@container hero (width < 500px) {
+		margin-block: 1rem;
+	}
+}

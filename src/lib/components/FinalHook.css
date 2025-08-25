@@ -1,0 +1,41 @@
+.FinalHook-container {
+	display: grid;
+	place-items: center;
+	margin-block: 4rem;
+}
+
+.FinalHook {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	max-width: 30rem;
+	margin-inline: 1rem;
+	padding-block: 3rem;
+
+	text-align: center;
+
+	background-color: var(--cl-raise);
+	box-shadow: var(--bs-full-drop);
+}
+
+.FinalHook-content {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding-inline: 2.5rem;
+}
+
+.FinalHook-title {
+	margin: 0;
+}
+
+.FinalHook-body {
+	margin: 0;
+	line-height: 1.5;
+}
+
+.FinalHook-callToAction {
+	place-self: center;
+	max-width: 17rem;
+}

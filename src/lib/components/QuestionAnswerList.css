@@ -1,0 +1,32 @@
+.QuestionAnswerList {
+	display: flex;
+	flex-direction: column;
+	max-width: fit-content;
+	margin-block: 2rem;
+}
+
+.QuestionAnswerList-ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.QuestionAnswerList-li {
+	display: contents;
+}
+
+.QuestionAnswerList-collapseContainer {
+	overflow: clip;
+	place-self: end;
+}
+
+.QuestionAnswerList-collapse {
+	translate: 0 -200%;
+	border-start-start-radius: 0;
+	border-start-end-radius: 0;
+	transition: translate 250ms ease-out 150ms;
+}
+
+.QuestionAnswerList-collapse.is-visible {
+	translate: 0;
+}

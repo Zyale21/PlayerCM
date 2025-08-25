@@ -1,0 +1,21 @@
+main {
+	container-type: inline-size;
+	display: flex;
+	flex-direction: column;
+	gap: 4.5rem;
+}
+
+h2 {
+	font-size: var(--fs-header);
+}
+
+.Home-navbar {
+	position: fixed;
+	inset: 0;
+	translate: 0 -100%;
+	transition: translate 200ms ease-out;
+}
+
+.Home-navbar.is-visible {
+	translate: 0;
+}

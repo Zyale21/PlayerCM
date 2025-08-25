@@ -1,0 +1,44 @@
+.ContactForm {
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-template-columns: min-content 1fr;
+	gap: 1rem 3rem;
+	place-self: center;
+
+	@container footer (width > 1000px) {
+		grid-area: form;
+	}
+}
+
+.ContactForm-header,
+.ContactForm-submit {
+	grid-column: 1 / 3;
+}
+
+.ContactForm-header {
+	text-align: center;
+}
+
+.ContactForm-label {
+	place-self: start;
+	font-style: italic;
+}
+
+.ContactForm-input {
+	place-self: stretch;
+
+	padding: 0.5rem;
+
+	font-size: var(--fs-placeholder);
+
+	background-color: var(--cl-raise);
+	box-shadow: var(--bs-full-drop);
+}
+
+.ContactForm-input--textarea {
+	resize: none;
+}
+
+.ContactForm-submit {
+	place-self: center;
+}

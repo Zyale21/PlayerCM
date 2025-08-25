@@ -1,0 +1,34 @@
+.ServiceList-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.ServiceList-title {
+	text-align: center;
+}
+
+.ServiceList {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+	gap: 1.5rem;
+	justify-content: center;
+
+	max-width: 64rem;
+	margin: 0 1rem;
+	padding: 0;
+
+	list-style-type: none;
+
+	@container (width > 1000px) {
+		margin-inline: auto;
+	}
+}
+
+.ServiceList-item {
+	display: contents;
+}
+
+.ServiceList-cta {
+	place-self: center;
+	margin-block-start: 3rem;
+}

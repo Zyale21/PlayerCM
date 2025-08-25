@@ -1,0 +1,46 @@
+.ContactInfo {
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	place-self: center;
+
+	max-width: 28rem;
+
+	@container footer (width > 1000px) {
+		grid-area: info;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.ContactInfo-header {
+	text-align: center;
+
+	@container footer (width > 1000px) {
+		grid-column: 1 / 3;
+	}
+}
+
+.ContactInfo-traditional,
+.ContactInfo-socialMedia {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+}
+
+.ContactInfo-logo {
+	font-size: var(--fs-icon-secondary);
+	color: var(--cl-accent);
+}
+
+.ContactInfo-item {
+	display: flex;
+	flex-direction: row;
+	gap: 0.625rem;
+	align-items: center;
+	justify-content: center;
+
+	color: inherit;
+	text-align: center;
+	text-decoration: none;
+}

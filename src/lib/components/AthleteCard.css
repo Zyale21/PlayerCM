@@ -1,0 +1,76 @@
+.AthleteCard {
+	--fs-tag: 0.625rem;
+	--fs-info: 0.75rem;
+
+	display: grid;
+	grid-template:
+		"portrait" 1fr
+		"name" min-content
+		"info" min-content
+		"tags" min-content / 1fr;
+	gap: 0.5rem;
+
+	padding-block-end: 0.75rem;
+	border-radius: 0.5rem;
+
+	color: inherit;
+	text-decoration: none;
+
+	background-color: var(--cl-drop);
+	box-shadow: var(--bs-full-inner);
+}
+
+.AthleteCard-portrait {
+	overflow: hidden;
+	grid-area: portrait;
+
+	width: 100%;
+	height: 100%;
+	border-radius: 0.25rem;
+
+	object-fit: cover;
+	box-shadow: var(--bs-full-inner);
+}
+
+.AthleteCard-name {
+	grid-area: name;
+
+	margin: 0;
+
+	color: var(--cl-accent-secondary);
+	text-align: center;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.AthleteCard-info {
+	--gap: 0.75rem;
+
+	display: flex;
+	grid-area: info;
+	flex-direction: row;
+	gap: var(--gap);
+	justify-content: center;
+
+	font-size: var(--fs-info);
+}
+
+.AthleteCard-position,
+.AthleteCard-school {
+	margin: 0;
+	text-wrap: nowrap;
+}
+
+.AthleteCard-school {
+	position: relative;
+}
+
+.AthleteCard-school::before {
+	content: "";
+
+	position: absolute;
+	left: calc(var(--gap) * -0.5 - 1px);
+	inset-block: 0;
+
+	border: 0.5px solid var(--cl-foreground);
+}

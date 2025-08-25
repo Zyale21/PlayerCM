@@ -1,0 +1,67 @@
+.AthleteCarousel-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.AthleteCarousel-title {
+	text-align: center;
+}
+
+.AthleteCarousel {
+	scroll-snap-type: x proximity;
+
+	overflow-x: scroll;
+	display: flex;
+	flex-direction: row;
+	gap: 2.25rem;
+	justify-content: space-evenly;
+
+	margin: 0;
+	padding: 1.5rem;
+
+	list-style-type: none;
+
+	background-color: var(--cl-drop);
+}
+
+.AthleteCarousel-item {
+	display: contents;
+}
+
+.AthleteCarousel-athlete {
+	scroll-snap-align: center;
+	max-width: 12rem;
+	background: none;
+	box-shadow: none;
+}
+
+.AthleteCarousel-radioGroup {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	justify-content: center;
+
+	margin-block: 1rem;
+}
+
+.AthleteCarousel-radio {
+	cursor: pointer;
+
+	aspect-ratio: 1;
+	width: 1rem;
+	border: none;
+	border-radius: 100%;
+
+	background-color: var(--cl-drop);
+
+	transition: background-color 250ms ease;
+}
+
+.AthleteCarousel-radio.is-active {
+	background-color: var(--cl-accent);
+}
+
+.AthleteCarousel-cta {
+	place-self: center;
+	margin-block-start: 3rem;
+}

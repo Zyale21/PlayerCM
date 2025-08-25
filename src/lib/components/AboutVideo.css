@@ -1,0 +1,58 @@
+.AboutVideo-container {
+	container-name: about-us-video;
+	container-type: inline-size;
+	margin-block: 10rem;
+}
+
+.AboutVideo-layout {
+	display: grid;
+	grid-template:
+		"title" min-content
+		"info" min-content
+		"video" 1fr / 1fr;
+	gap: 0.7rem 2rem;
+	padding-inline: 2rem;
+
+	@container about-us-video (width > 800px) {
+		grid-template:
+			"title video" min-content
+			"info video" min-content / 1fr 1fr;
+		margin-inline: clamp(4rem, 20vw - 8rem, 16rem);
+	}
+}
+
+.AboutVideo-title {
+	grid-area: title;
+	margin: 0;
+	text-align: center;
+
+	@container about-us-video (width > 800px) {
+		place-self: end start;
+		text-align: unset;
+	}
+}
+
+.AboutVideo-info {
+	grid-area: info;
+	place-self: center;
+
+	max-width: 20rem;
+	margin: 0;
+
+	line-height: 1.4;
+	text-align: center;
+
+	@container about-us-video (width > 800px) {
+		place-self: start;
+		max-width: 26rem;
+		font-size: var(--fs-accent);
+		text-align: unset;
+	}
+}
+
+.AboutVideo {
+	grid-area: video;
+	place-self: center;
+	max-width: 100%;
+	margin-block: 2rem;
+}

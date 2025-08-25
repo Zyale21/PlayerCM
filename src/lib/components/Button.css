@@ -1,0 +1,24 @@
+:where(.Button) {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+
+	max-width: 12rem;
+	padding: 0.25rem 0.5rem;
+	border: none;
+	border-radius: 0.25rem;
+
+	font-family: var(--ff-cta);
+	font-size: var(--fs-cta);
+	color: var(--cl-background);
+	text-align: center;
+	text-decoration: none;
+
+	background-color: var(--cl-accent);
+	box-shadow: var(--bs-full-drop);
+}
+
+.Button-action {
+	font-size: var(--fs-icon);
+}

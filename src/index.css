@@ -1,0 +1,113 @@
+/* stylelint-disable custom-property-empty-line-before */
+/* stylelint-disable plugin/selector-bem-pattern */
+
+:root {
+	--cl-accent: hsl(41deg 100% 82% / 100%);
+	--cl-accent-secondary: hsl(41deg 100% 90% / 100%);
+	--cl-background: hsl(228deg 9% 14% / 100%);
+	--cl-raise: hsl(228deg 9% 19% / 100%);
+	--cl-drop: hsl(228deg 9% 7% / 100%);
+	--cl-nav-background: var(--cl-raise);
+	--cl-foreground: #fff;
+
+	--ff-header: "Libre Bodoni Variable", serif;
+	--ff-body: "Faustina Variable", serif;
+	--ff-cta: "Playfair Variable", serif;
+	--ff-accent: var(--ff-header);
+	--ff-hero: var(--ff-body);
+
+	--fs-header: 1.75rem;
+	--fs-subheader: 1.5rem;
+	--fs-accent: 1.25rem;
+	--fs-accent-secondary: 1.125rem;
+	--fs-secondary: 0.85rem;
+	--fs-icon: 2rem;
+	--fs-icon-secondary: 1.5rem;
+	--fs-icon-inline: var(--fs-accent);
+	--fs-hero-nav-link: var(--fs-accent-secondary);
+	--fs-cta: var(--fs-accent);
+	--fs-placeholder: var(--fs-secondary);
+	--fs-copyright: var(--fs-secondary);
+
+	--fw-header: 400;
+
+	--fx-link-hover: brightness(110%);
+	--tr-link-hover: filter 150ms ease;
+
+	--bs-full-drop:
+		0px 4px 4px 0px rgb(0 0 0 / 25%), 0px -4px 4px 0px rgb(0 0 0 / 25%), 4px 0px 4px 0px rgb(
+			0 0 0 /
+			25%
+		), -4px 0px 4px 0px rgb(0 0 0 / 25%);
+	--bs-vertical-inner: 0px -4px 4px 0px rgb(0 0 0 / 25%) inset, 0px 4px 4px 0px
+		rgb(0 0 0 / 25%) inset;
+	--bs-full-inner:
+		-4px 0px 4px 0px rgb(0 0 0 / 25%) inset, 4px 0px 4px 0px rgb(0 0 0 / 25%) inset, 0px -4px 4px 0px rgb(
+			0 0 0 /
+			25%
+		) inset, 0px 4px 8px 0px #000 inset;
+
+	--z-navbar: 1000;
+	--z-background: -100;
+
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: var(--ff-body);
+	color: var(--cl-foreground);
+	background-color: var(--cl-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--ff-header);
+	font-weight: var(--fw-header);
+}
+
+h1,
+h2,
+h3 {
+	color: var(--cl-accent);
+}
+
+h4,
+h5,
+h6 {
+	color: var(--cl-accent-secondary);
+}
+
+a {
+	color: var(--cl-accent);
+	transition: var(--tr-link-hover);
+}
+
+a:hover {
+	filter: var(--fx-link-hover);
+}
+
+input,
+textarea {
+	border: none;
+	color: var(--cl-foreground);
+	background-color: var(--cl-drop);
+	box-shadow: var(--bs-full-inner);
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+	outline-color: var(--cl-accent);
+}

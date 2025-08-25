@@ -1,0 +1,34 @@
+.EmployeeList-container {
+	display: grid;
+	gap: 4rem;
+}
+
+.EmployeeList {
+	container-name: list;
+	container-type: inline-size;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	align-items: center;
+
+	margin: 0 2rem;
+	padding: 0;
+
+	list-style-type: none;
+
+	@container (width > 1000px) {
+		flex-flow: wrap;
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: center;
+	}
+}
+
+.EmployeeList-item {
+	display: contents;
+}
+
+.EmployeeList-callToAction {
+	place-self: center;
+	max-width: 10rem;
+}
