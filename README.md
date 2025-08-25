@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+# Players Club Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Players Club Management is a California-based NIL agency focused on helping high school and college athletes unlock the full potential of their NIL rights. Our mission is to create wealth and build legacies for athletes while ensuring they are recognized as people with unique stories and goals.
 
-Currently, two official plugins are available:
+## Developing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is using [Poetry](https://python-poetry.org/) to manage dependencies. It manages packages per project, similar to [npm](https://www.npmjs.com/).
 
-## Expanding the ESLint configuration
+To install dependencies, run:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+$ poetry install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+To run the dev server:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+$ poetry run python3 ./manage.py runserver
 ```
+
+More info about Django can be found on the [Django website](https://www.djangoproject.com/).
