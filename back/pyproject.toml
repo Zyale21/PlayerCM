@@ -1,0 +1,25 @@
+[project]
+name = "pcm-backend"
+version = "0.1.0"
+description = ""
+authors = [{ name = "mocha8686", email = "june.mocha8686@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["django (>=5.1.5,<6.0.0)", "django-cors-headers (>=4.6.0,<5.0.0)", "djangorestframework (>=3.15.2,<4.0.0)", "markdown (>=3.7,<4.0)"]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+django-stubs = "^5.1.2"
+ruff = "^0.9.4"
+
